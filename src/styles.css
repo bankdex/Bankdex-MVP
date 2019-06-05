@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: MicrosoftNew TaiLue;
+    src: url("assets/fonts/ntailu.ttf") format("truetype");
+}
+
+body{
+    background: black;
+    /* background: white; */
+    font-family: MicrosoftNew TaiLue;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    color:#ffffff;
+    /* color:black; */
+}
+/* .mat-button, .mat-icon-button, .mat-stroked-button {
+    color: inherit;
+    background: #078ec4;
+} */
+span{
+    font-size: 12px;
+}

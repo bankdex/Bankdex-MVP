@@ -1,0 +1,201 @@
+#grid-container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    min-height: 660px;
+    grid-template-rows: 10% 85%;
+    grid-gap: 3px 3px;
+    padding: 10px;
+}
+
+#header {
+    display: grid;
+    grid-column-gap: 5px;
+    grid-template-columns: 10% 13% auto 13% 15%;
+}
+
+#hImgSec {
+    background: rgb(32, 31, 31);
+}
+
+#hImgSec img {
+    width: 70%;
+}
+
+#hDateSec {
+    background: rgb(32, 31, 31);
+    padding-top: 25px;
+}
+
+#hDateSec span {
+    font-size: 13px;
+}
+
+#hPriceSec {
+    background: rgb(32, 31, 31);
+    padding-top: 15px;
+}
+
+#hConSec {
+    background: rgb(32, 31, 31);
+    padding-top: 20px;
+}
+#hConSec  span{
+    
+    cursor: pointer;
+}
+#hConSec  span:hover{
+    color: #fbbd13;
+}
+#dipWidSec {
+    background: rgb(32, 31, 31);
+    padding-top: 13px;
+        text-align: right;
+    padding-right: 15px;
+}
+
+#dipWidSec>div p {
+    display: table-row;
+}
+
+#header div {
+    display: inline;
+    padding-left: 20px;
+}
+
+#header div p {
+    display: table-row;
+    font-size: 12px;
+}
+
+#middle {
+    display: grid;
+    grid-column-gap: 3px;
+    grid-template-columns: 94% auto;
+}
+
+#insidemiddle {
+    display: grid;
+    grid-column-gap: 3px;
+    grid-row-gap: 3px;
+    grid-template-rows: 460px auto;
+}
+
+#FirstRow {
+    display: grid;
+    grid-column-gap: 3px;
+    grid-template-columns: 80.2% 20%;
+}
+
+#SecondRow {
+    display: grid;
+    grid-column-gap: 3px;
+    grid-template-columns: 60% 20% auto;
+}
+
+.m-leftSidebar {
+    background: rgb(32, 31, 31);
+    border: 1px solid black;
+    padding: 20px;
+    ;
+}
+
+.m-leftSidebar div {
+    padding: 10px;
+}
+
+.m-leftSidebar div button {
+    font-size: 12px;
+}
+
+.m-leftSidebar div button:nth-child(1) {
+    background: #fbbd13;
+    color: black;
+}
+
+.m-rightTokenSidebar {
+    margin-left: 6px;
+    /* width: 40%; */
+}
+
+.m-middleSidebar {
+    background: rgb(32, 31, 31);
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.m-rightSidebar {
+    background: rgb(32, 31, 31);
+    border: 1px solid black;
+    padding: 10px;
+    /* width: 40%; */
+}
+
+.m-rightSidebar p {
+    font-size: 12px;
+}
+
+/* angular material css */
+
+mat-select {
+    color: white !important;
+}
+
+table {
+    width: 100%;
+}
+
+.mat-cell, .mat-footer-cell {
+    font-size: 12px;
+    color: white;
+    background: rgb(32, 31, 31);
+}
+
+th.mat-header-cell {
+    padding: 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    background: rgb(32, 31, 31);
+    color: white;
+}
+
+/* fild input css */
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+/* button css */
+
+.m-leftSidebar div button.mat-button {
+    line-height: 20px;
+    min-width: 100px;
+}
+
+.m-leftSidebar div button.mat-flat-button {
+    line-height: 20px;
+    color: white;
+    background: #333131;
+    min-width: 50px;
+    border-left: 1px solid black;
+    /* width: 8%; */
+}
+
+.mat-button {
+    line-height: 30px;
+    color: black;
+}
+
+.mat-flat-button {
+    line-height: 30px;
+}
+
+.mat-icon.mat-primary {
+    color: #f70606;
+}

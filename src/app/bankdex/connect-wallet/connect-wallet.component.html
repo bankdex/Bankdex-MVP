@@ -1,0 +1,28 @@
+<div id="walletGridContainer">
+  <div id="walletSidebar">
+    <div>
+      <img src="assets/myImages/Logo.png" alt="Bankdex Logo" style="width:10%">&nbsp;&nbsp;<span style="font-size:15px">Bankdex
+        Network</span>
+    </div>
+    <div>
+      <p>Connect to</p>
+      <div>
+        <p (click)=" showEthereum()"><img src="assets/myImages/ethierum-logo.png" alt="Bankdex Logo" style="width:24%">&nbsp;&nbsp;Ethereum Wallet</p>
+        <!-- <p (click)="showNeo()">Neo Wallet</p> -->
+      </div>
+    </div>
+  </div>
+  <div id="wlletContent">
+    <div>
+      <mat-icon style="float:right;cursor: pointer;" (click)="onNoClick()">clear</mat-icon>
+    </div>
+    <div style="padding:10px;">
+      <div *ngIf="ethereum==true">
+        <app-ethereum-wallet></app-ethereum-wallet>
+      </div>
+      <div *ngIf="neo==true">
+          <app-neo-wallet></app-neo-wallet>
+      </div>
+    </div>
+  </div>
+</div>

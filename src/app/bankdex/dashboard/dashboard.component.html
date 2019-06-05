@@ -1,0 +1,636 @@
+<div id="grid-container">
+  <div id="header">
+    <div id="hImgSec" style="margin-top: 13px;">
+    
+        <img src="assets/myImages/Logo.png" alt="Bankdex Logo">
+        <span style="margin-left: -4px;font-size: 12px !important;vertical-align: bottom;">2018-12-20 01:11:24</span>
+     
+    </div>
+    <div id="hDateSec">
+    </div>
+    <div id="hPriceSec">
+      <div>
+        <p style="color:#fbb713">Last Price</p>
+        <p><span style="color:#8656bb">30000.45</span>&nbsp;&nbsp;<span style="color:#aa50a0">$5215.23</span></p>
+      </div>
+      <div>
+        <p style="color:#fbb713">24h Change</p>
+        <p><span style="color:#367e7d">246.05</span>&nbsp; <span style="color:#55ba7c">+6.61%</span></p>
+      </div>
+      <div>
+        <p style="color:#fbb713">24h High</p>
+        <p><span>3,982.12</span></p>
+      </div>
+      <div>
+        <p style="color:#fbb713">24h Low</p>
+        <p><span>3,630.23</span></p>
+      </div>
+      <div>
+        <p style="color:#fbb713">24h Volume</p>
+        <p><span>347,206,793.22 USDT</span></p>
+      </div>
+    </div>
+    <div id="hConSec">
+      <p *ngIf="false">
+        <mat-icon color="accent">wifi</mat-icon>&nbsp;Connected
+      </p>
+      <p>
+        <span (click)="openDialog()">
+          <mat-icon style="color:#fbb713">wifi</mat-icon>&nbsp;<span
+            style="margin-left: -5px;font-size: 12px;">Connected</span>
+        </span>
+      </p>
+    </div>
+    <div id="dipWidSec">
+      <div style="padding-left:0px !important">
+        <img src="assets/myImages/deposit.png" alt="Bankdex Logo" style="border-right:1px solid;cursor:pointer">
+        <img src="assets/myImages/withdrawl.png" alt="Bankdex Logo" style="cursor:pointer">
+      </div>
+    </div>
+  </div>
+  <div id="middle">
+    <div id="insidemiddle">
+      <div id="FirstRow">
+        <div colspan="2" class="m-leftSidebar">
+          <div style="background-color: #16161a;border-radius: 30px 0px 0px 0px;width: 973px;height: 48px;">
+            <!-- <span style="padding-left:20px"> -->
+              <!-- <mat-form-field style="width: 50px;">
+                <mat-select placeholder="Time">
+                  <mat-option>1 decimals</mat-option>
+                  <mat-option>0 decimals</mat-option>
+                </mat-select>
+              </mat-form-field>&nbsp;&nbsp;
+              <mat-form-field style="width: 30px;">
+                <mat-select placeholder="M">
+                  <mat-option>1 decimals</mat-option>
+                  <mat-option>0 decimals</mat-option>
+                </mat-select>
+              </mat-form-field>&nbsp;&nbsp;
+              <mat-form-field style="width: 35px;">
+                <mat-select placeholder="1H">
+                  <mat-option>1 decimals</mat-option>
+                  <mat-option>0 decimals</mat-option>
+                </mat-select>
+              </mat-form-field>&nbsp;&nbsp;
+              <mat-form-field style="width: 35px;">
+                <mat-select placeholder="1D">
+                  <mat-option>1 decimals</mat-option>
+                  <mat-option>0 decimals</mat-option>
+                </mat-select>
+              </mat-form-field>&nbsp;&nbsp;
+              <mat-form-field style="width: 38px;">
+                <mat-select placeholder="1W">
+                  <mat-option>1 decimals</mat-option>
+                  <mat-option>0 decimals</mat-option>
+                </mat-select>
+              </mat-form-field>&nbsp;&nbsp;
+              <mat-form-field style="width: 37px;">
+                <mat-select placeholder="1M">
+                  <mat-option>1 decimals</mat-option>
+                  <mat-option>0 decimals</mat-option>
+                </mat-select>
+              </mat-form-field>&nbsp;&nbsp;
+              <mat-form-field style="width: 50px;">
+                <mat-select placeholder="Tools">
+                  <mat-option>1 decimals</mat-option>
+                  <mat-option>0 decimals</mat-option>
+                </mat-select>
+              </mat-form-field>&nbsp;&nbsp;
+              <mat-form-field style="width: 75px;">
+                <mat-select placeholder="Indicators">
+                  <mat-option>1 decimals</mat-option>
+                  <mat-option>0 decimals</mat-option>
+                </mat-select>
+              </mat-form-field> -->
+            <!-- </span> -->
+             <span style="float: left;padding:25px 0px 0px 29px;">
+              <span style="color:#fbb713;cursor: pointer;vertical-align: bottom;font-size: 11px !important">Time</span>&nbsp;&nbsp;|
+              <span style="cursor: pointer;vertical-align: bottom;">M</span>&nbsp;&nbsp;|
+              <span style="cursor: pointer;vertical-align: bottom;">1H</span>&nbsp;&nbsp;|
+              <span style="cursor: pointer;vertical-align: bottom;">1D</span>&nbsp;&nbsp;|
+              <span style="cursor: pointer;vertical-align: bottom;">1W</span>&nbsp;&nbsp;|
+              <span style="cursor: pointer;vertical-align: bottom;">1M</span>&nbsp;&nbsp;|
+              <span style="cursor: pointer;vertical-align: bottom;">Tools</span>&nbsp;&nbsp;|
+              <span style="cursor: pointer;vertical-align: bottom;">Indicators</span>&nbsp;&nbsp;
+            </span>
+            <span style="float: right;padding: 25px 3px 0px 0px;">
+              <span style="color:#fbb713;cursor: pointer;vertical-align: bottom;">Original</span>&nbsp;&nbsp;|
+              <span style="cursor: pointer;vertical-align: bottom;">Trading View</span>&nbsp;&nbsp;|
+              <span style="cursor: pointer;vertical-align: bottom;">Depth</span>&nbsp;&nbsp;
+            </span>
+          </div>
+          <div style="background: #0a0a0f;min-height: 405px;">
+            <app-graph></app-graph>
+          </div>
+        </div>
+        <div id="Firstmiddlerow">
+          <div id="first">
+            <div class="divTop">
+              <img src="assets/myImages/1.png" alt="">
+              <img src="assets/myImages/2.png" alt="">
+              <img src="assets/myImages/3.png" alt="">
+              &nbsp;<span>Groups</span>&nbsp;
+              <span>
+                <mat-form-field style="width: 81px;">
+                  <mat-select placeholder="2 decimals">
+                    <mat-option>1 decimals</mat-option>
+                    <mat-option>0 decimals</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </span>
+            </div>
+            <div class="divMiddle">
+              <span style="color:#0082b4;font-size: 20px !important;">3485.97</span>&nbsp;<img src="assets/myImages/up-arrow.png" alt=""
+                style="height: 15px;">
+              <span style="color:#fbb713;font-size: 20px !important;margin-left: 28px">$3,495.17</span>
+            </div>
+          </div>
+          <div id="second">
+            <table>
+              <tr>
+                <td><span style="color:#0082b4">3,458,97</span></td>
+                <td><span>0.823452</span></td>
+                <td><span>01:33:24</span></td>
+              </tr>
+              <tr>
+                <td><span style="color:#aa00a0">3,458,97</span></td>
+                <td><span>0.823452</span></td>
+                <td><span>01:33:24</span></td>
+              </tr>
+              <tr>
+                <td><span style="color:#0082b4">3,458,97</span></td>
+                <td><span>0.823452</span></td>
+                <td><span>01:33:24</span></td>
+              </tr>
+              <tr>
+                <td><span style="color:#aa00a0">3,458,97</span></td>
+                <td><span>0.823452</span></td>
+                <td><span>01:33:24</span></td>
+              </tr>
+              <tr>
+                <td><span style="color:#0082b4">3,458,97</span></td>
+                <td><span>0.823452</span></td>
+                <td><span>01:33:24</span></td>
+              </tr>
+              <tr>
+                <td><span style="color:#aa00a0">3,458,97</span></td>
+                <td><span>0.823452</span></td>
+                <td><span>01:33:24</span></td>
+              </tr>
+              <tr>
+                <td><span style="color:#0082b4">3,458,97</span></td>
+                <td><span>0.823452</span></td>
+                <td><span>01:33:24</span></td>
+              </tr>
+              <tr>
+                <td><span style="color:#aa00a0">3,458,97</span></td>
+                <td><span>0.823452</span></td>
+                <td><span>01:33:24</span></td>
+              </tr>
+              <tr>
+                <td><span style="color:#0082b4">3,458,97</span></td>
+                <td><span>0.823452</span></td>
+                <td><span>01:33:24</span></td>
+              </tr>
+              <tr>
+                <td><span style="color:#aa00a0">3,458,97</span></td>
+                <td><span>0.823452</span></td>
+                <td><span>01:33:24</span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="m-rightSidebar" style="display:none">
+        </div>
+      </div>
+      <div id="SecondRow">
+        <div class="m-leftSidebar" style="border-radius: 0px 0px 0px 27px;background: #0d0d12;">
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+                  aria-controls="v-pills-home" aria-selected="true" style="color: white !important;">Funds</a>
+                <mat-divider style="margin-top: 5px;"></mat-divider>
+                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
+                  aria-controls="v-pills-profile" aria-selected="false" style="color: white !important;">Open Orders</a>
+                <mat-divider style="margin-top: 5px;"></mat-divider>
+                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
+                  aria-controls="v-pills-messages" aria-selected="false" style="color: white !important;">Order
+                  History</a>
+                <mat-divider style="margin-top: 5px;"></mat-divider>
+                <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+                  aria-controls="v-pills-settings" aria-selected="false" style="color: white !important;">Trade
+                  History</a>
+                <mat-divider style="margin-top: 5px;"></mat-divider>
+              </div>
+            </div>
+            <div class="col-lg-9">
+              <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                  aria-labelledby="v-pills-home-tab">
+                  <div class="tab-font-size-change" style="padding-top: 20px;">
+                    <button mat-flat-button><span>Coin</span></button>
+                    <button mat-flat-button><span>Total balance</span></button>
+                    <button mat-flat-button><span>Available balance</span></button>
+                    <button mat-flat-button><span>In order</span></button>
+                    <button mat-flat-button><span style="color:#fbb713">BTC Value &#9660;</span></button>
+                  </div>
+                  <mat-divider style="margin-top: 10px;"></mat-divider>
+                </div>
+
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                  <div class="tab-font-size-change" style="padding-top: 41px;">
+                    <button mat-flat-button style="min-width: 66px;"><span>Date</span></button>
+                    <button mat-flat-button style="min-width: 66px;"><span>Pair</span></button>
+                    <button mat-flat-button style="min-width: 66px;"><span>Type</span></button>
+                    <button mat-flat-button style="min-width: 66px;"><span>Side</span></button>
+                    <button mat-flat-button style="min-width: 66px;"><span>Amount</span></button>
+                    <button mat-flat-button style="min-width: 66px;"><span>Price</span></button>
+                    <button mat-flat-button style="min-width: 66px;"><span>Filled</span></button>
+                    <button mat-flat-button style="min-width: 66px;"><span>Total</span></button>
+                    <button mat-flat-button style="min-width: 66px;"><span>Trigger</span></button>
+                    <button mat-flat-button style="min-width: 66px;"><span style="color:#fbb713">Cancell All
+                        &#9660;</span></button>
+                  </div>
+                  <mat-divider style="margin-top: 10px;"></mat-divider>
+                </div>
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                  <div class="tab-font-size-change" style="padding-top: 83px;">
+                    <button mat-flat-button><span style="color:#fbb713">1 Day</span></button>
+                    <button mat-flat-button><span style="color:#fbb713">1 Week</span></button>
+                    <button mat-flat-button><span style="color:#fbb713">1 Month</span></button>
+                    <button mat-flat-button><span style="color:#fbb713">3 Month</span></button>
+                    <button mat-flat-button><span>From</span></button>
+                    <button mat-flat-button><span>Date</span></button>
+                    <button mat-flat-button><span>Pair</span></button>
+                    <button mat-flat-button><span>Type</span></button>
+                    <button mat-flat-button><span>Side</span></button>
+                    <button mat-flat-button><span>Price</span></button>
+                    <button mat-flat-button><span>Amount</span></button>
+                    <button mat-flat-button><span>Total</span></button>
+                  </div>
+                  <mat-divider style="margin-top: 10px;"></mat-divider>
+                </div>
+                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                  <div class="tab-font-size-change" style="padding-top: 127px;">
+                    <button mat-flat-button><span style="color:#fbb713">1 Day</span></button>
+                    <button mat-flat-button><span style="color:#fbb713">1 Week</span></button>
+                    <button mat-flat-button><span style="color:#fbb713">1 Month</span></button>
+                    <button mat-flat-button><span style="color:#fbb713">3 Month</span></button>
+                    <button mat-flat-button><span>From</span></button>
+                    <button mat-flat-button><span>Time</span></button>
+                    <button mat-flat-button><span>Pair</span></button>
+                    <button mat-flat-button><span>Type</span></button>
+                    <button mat-flat-button><span>Price</span></button>
+                    <button mat-flat-button><span>Filled</span></button>
+                    <button mat-flat-button><span>Fee</span></button>
+                    <button mat-flat-button><span>Total</span></button>
+                  </div>
+                  <mat-divider style="margin-top: 10px;"></mat-divider>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- <div>
+            <div class="row">
+              <div class="col-lg-2">
+                <button mat-flat-button>Funds</button>
+              </div>
+              <div class="col-lg-2">
+                <button mat-flat-button><span>Coin</span></button>
+              </div>
+              <div class="col-lg-2">
+                <button mat-flat-button><span>Total balance</span></button>
+              </div>
+              <div class="col-lg-2">
+                <button mat-flat-button><span>Available balance</span></button>
+              </div>
+              <div class="col-lg-2">
+                <button mat-flat-button><span>In order</span></button>
+              </div>
+              <div class="col-lg-2">
+                <button mat-flat-button><span style="color:#fbb713">BTC Value
+                    &#9660;</span></button>
+              </div>
+            </div>
+            <mat-divider></mat-divider>
+          </div>
+          <div>
+            <div class="row"></div>
+          </div>
+          <div>
+            <div class="row"></div>
+          </div>
+          <div>
+            <div class="row"></div>
+          </div> -->
+          <!-- <mat-tab-group>
+            <mat-tab label="Funds"><br>
+              <div class="tab-font-size-change">
+                <button mat-flat-button><span>Coin</span></button>
+                <button mat-flat-button><span>Total balance</span></button>
+                <button mat-flat-button><span>Available balance</span></button>
+                <button mat-flat-button><span>In order</span></button>
+                <button mat-flat-button><span style="color:#fbb713">BTC Value &#9660;</span></button>
+              </div>
+            </mat-tab>
+            <mat-tab label="Open Orders"><br>
+              <div class="tab-font-size-change">
+                <button mat-flat-button style="min-width: 66px;"><span>Date</span></button>
+                <button mat-flat-button style="min-width: 66px;"><span>Pair</span></button>
+                <button mat-flat-button style="min-width: 66px;"><span>Type</span></button>
+                <button mat-flat-button style="min-width: 66px;"><span>Side</span></button>
+                <button mat-flat-button style="min-width: 66px;"><span>Amount</span></button>
+                <button mat-flat-button style="min-width: 66px;"><span>Price</span></button>
+                <button mat-flat-button style="min-width: 66px;"><span>Filled</span></button>
+                <button mat-flat-button style="min-width: 66px;"><span>Total</span></button>
+                <button mat-flat-button style="min-width: 66px;"><span>Trigger</span></button>
+                <button mat-flat-button style="min-width: 66px;"><span style="color:#fbb713">Cancell All &#9660;</span></button>
+              </div>
+            </mat-tab>
+            <mat-tab label="Order History"><br>
+              <div class="tab-font-size-change">
+                <button mat-flat-button><span style="color:#fbb713">1 Day</span></button>
+                <button mat-flat-button><span style="color:#fbb713">1 Week</span></button>
+                <button mat-flat-button><span style="color:#fbb713">1 Month</span></button>
+                <button mat-flat-button><span style="color:#fbb713">3 Month</span></button>
+                <button mat-flat-button><span>From</span></button>
+                <button mat-flat-button><span>Date</span></button>
+                <button mat-flat-button><span>Pair</span></button>
+                <button mat-flat-button><span>Type</span></button>
+                <button mat-flat-button><span>Side</span></button>
+                <button mat-flat-button><span>Price</span></button>
+                <button mat-flat-button><span>Amount</span></button>
+                <button mat-flat-button><span>Total</span></button>
+              </div>
+            </mat-tab>
+            <mat-tab label="Trade History"><br>
+              <div class="tab-font-size-change">
+                <button mat-flat-button><span style="color:#fbb713">1 Day</span></button>
+                <button mat-flat-button><span style="color:#fbb713">1 Week</span></button>
+                <button mat-flat-button><span style="color:#fbb713">1 Month</span></button>
+                <button mat-flat-button><span style="color:#fbb713">3 Month</span></button>
+                <button mat-flat-button><span>From</span></button>
+                <button mat-flat-button><span>Time</span></button>
+                <button mat-flat-button><span>Pair</span></button>
+                <button mat-flat-button><span>Type</span></button>
+                <button mat-flat-button><span>Price</span></button>
+                <button mat-flat-button><span>Filled</span></button>
+                <button mat-flat-button><span>Fee</span></button>
+                <button mat-flat-button><span>Total</span></button>
+              </div>
+            </mat-tab>
+          </mat-tab-group> -->
+        </div>
+        <div class="m-middleSidebar">
+          <mat-tab-group mat-align-tabs="center">
+            <mat-tab label="Limit" style="font-size:11px !important"><br>
+              <div class="row" style="margin-right:0px">
+                <div class="col-lg-6">
+                  <ul>
+                    <li>
+                      <label>&nbsp;</label>
+                      <div class="buySellHeading">
+                        <span style="padding-left:3px;color:#009682">BTC</span>
+                        <span style="float:right;padding-top: 2px;padding-right: 3px;color:#aa00a0">USDT</span>
+                      </div>
+                    </li>
+                    <li>
+                      <label>Price :</label>&nbsp;<input placeholder="USDT">
+                    </li>
+                    <li>
+                      <label>Amount </label>&nbsp;<input placeholder="BTC">
+                    </li>
+                    <li>
+                      <label>&nbsp;</label>
+                      <div class="percentagePart">
+                        <span style="background-color:black;margin-right: 3px;cursor: pointer;">25%</span>
+                        <span style="background-color:black;margin-right: 3px;cursor: pointer;">50%</span>
+                        <span style="background-color:black;margin-right: 3px;cursor: pointer;">75%</span>
+                        <span style="background-color:black;cursor: pointer;">100%</span>
+                      </div>
+                    </li>
+                    <li>
+                      <label>Total </label>&nbsp;<input placeholder="USDT">
+                    </li>
+                    <li>
+                      <button class="buyBtn">Buy</button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <ul>
+                    <li>
+                      <label>&nbsp;</label>
+                      <div class="buySellHeading">
+                        <span style="padding-left:3px;color:#009682">BTC</span>
+                        <span style="float:right;padding-top: 2px;padding-right: 3px;color:#aa00a0">USDT</span>
+                      </div>
+                    </li>
+                    <li>
+                      <label>Price :</label>&nbsp;<input placeholder="USDT">
+                    </li>
+                    <li>
+                      <label>Amount </label>&nbsp;<input placeholder="BTC">
+                    </li>
+                    <li>
+                      <label>&nbsp;</label>
+                      <div class="percentagePart">
+                        <span style="background-color:black;margin-right: 3px;cursor: pointer;">25%</span>
+                        <span style="background-color:black;margin-right: 3px;cursor: pointer;">50%</span>
+                        <span style="background-color:black;margin-right: 3px;cursor: pointer;">75%</span>
+                        <span style="background-color:black;cursor: pointer;">100%</span>
+                      </div>
+                    </li>
+                    <li>
+                      <label>Total </label>&nbsp;<input placeholder="USDT">
+                    </li>
+                    <li>
+                      <button class="buyBtn" style="background-color:#0082b4">Sell</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </mat-tab>
+            <mat-tab label="Market" style="font-size:11px !important"><br>
+              <div class="row" style="margin-right:0px">
+                <div class="col-lg-6">
+                  <ul>
+                    <li>
+                      <label>&nbsp;</label>
+                      <div class="buySellHeading">
+                        <span style="padding-left:3px;color:#009682">BTC</span>
+                        <span style="float:right;padding-top: 2px;padding-right: 3px;color:#aa00a0">USDT</span>
+                      </div>
+                    </li>
+                    <li>
+                      <label>Price :</label>&nbsp;<input placeholder="USDT">
+                    </li>
+                    <li>
+                      <label>Amount </label>&nbsp;<input placeholder="BTC">
+                    </li>
+                    <li>
+                      <label>&nbsp;</label>
+                      <div class="percentagePart">
+                        <span style="background-color:black;margin-right: 3px;cursor: pointer;">25%</span>
+                        <span style="background-color:black;margin-right: 3px;cursor: pointer;">50%</span>
+                        <span style="background-color:black;margin-right: 3px;cursor: pointer;">75%</span>
+                        <span style="background-color:black;cursor: pointer;">100%</span>
+                      </div>
+                    </li><br>
+                    <li>
+                      <button class="buyBtn">Buy</button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <ul>
+                    <li>
+                      <label>&nbsp;</label>
+                      <div class="buySellHeading">
+                        <span style="padding-left:3px;color:#009682">BTC</span>
+                        <span style="float:right;padding-top: 2px;padding-right: 3px;color:#aa00a0">USDT</span>
+                      </div>
+                    </li>
+                    <li>
+                      <label>Price :</label>&nbsp;<input placeholder="USDT">
+                    </li>
+                    <li>
+                      <label>Amount </label>&nbsp;<input placeholder="BTC">
+                    </li>
+                    <li>
+                      <label>&nbsp;</label>
+                      <div class="percentagePart">
+                        <span style="background-color:black;margin-right: 3px;cursor: pointer;">25%</span>
+                        <span style="background-color:black;margin-right: 3px;cursor: pointer;">50%</span>
+                        <span style="background-color:black;margin-right: 3px;cursor: pointer;">75%</span>
+                        <span style="background-color:black;cursor: pointer;">100%</span>
+                      </div>
+                    </li><br>
+                    <li>
+                      <button class="buyBtn" style="background-color:#0082b4">Sell</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </mat-tab>
+            <mat-tab label="Stop-Limit" style="font-size:11px !important"><br>
+              <div class="row" style="margin-right:0px">
+                <div class="col-lg-6">
+                  <ul>
+                    <li>
+                      <label>&nbsp;</label>
+                      <div class="buySellHeading">
+                        <span style="padding-left:3px;color:#009682">BTC</span>
+                        <span style="float:right;padding-top: 2px;padding-right: 3px;color:#aa00a0">USDT</span>
+                      </div>
+                    </li>
+                    <li>
+                      <label>Stop :</label>&nbsp;<input placeholder="USDT">
+                    </li>
+                    <li>
+                      <label>Limit :</label>&nbsp;<input placeholder="USDT">
+                    </li>
+                    <li>
+                      <label>Amount :</label>&nbsp;<input placeholder="BTC">
+                    </li>
+                    <li>
+                      <label>&nbsp;</label>
+                      <div class="percentagePart">
+                        <span style="background-color:black;margin-right: 3px;cursor: pointer;">25%</span>
+                        <span style="background-color:black;margin-right: 3px;cursor: pointer;">50%</span>
+                        <span style="background-color:black;margin-right: 3px;cursor: pointer;">75%</span>
+                        <span style="background-color:black;cursor: pointer;">100%</span>
+                      </div>
+                    </li>
+                    <li>
+                      <label>Total </label>&nbsp;<input placeholder="USDT">
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <ul>
+                    <li>
+                      <label>&nbsp;</label>
+                      <div class="buySellHeading">
+                        <span style="padding-left:3px;color:#009682">BTC</span>
+                        <span style="float:right;padding-top: 2px;padding-right: 3px;color:#aa00a0">USDT</span>
+                      </div>
+                    </li>
+                    <li>
+                      <label>Stop :</label>&nbsp;<input placeholder="USDT">
+                    </li>
+                    <li>
+                      <label>Limit :</label>&nbsp;<input placeholder="USDT">
+                    </li>
+                    <li>
+                      <label>Amount :</label>&nbsp;<input placeholder="BTC">
+                    </li>
+                    <li>
+                      <label>&nbsp;</label>
+                      <div class="percentagePart">
+                        <span style="background-color:black;margin-right: 3px;cursor: pointer;">25%</span>
+                        <span style="background-color:black;margin-right: 3px;cursor: pointer;">50%</span>
+                        <span style="background-color:black;margin-right: 3px;cursor: pointer;">75%</span>
+                        <span style="background-color:black;cursor: pointer;">100%</span>
+                      </div>
+                    </li>
+                    <li>
+                      <label>Total </label>&nbsp;<input placeholder="USDT">
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+      </div>
+    </div>
+    <div class="m-rightSidebar m-rightTokenSidebar" style="border-radius: 0px 27px 27px 0px;">
+      <div>
+        <mat-form-field style="width: 60px;">
+          <mat-select placeholder="SAM">
+            <mat-option>SAM</mat-option>
+            <mat-option>Bitcoin</mat-option>
+            <mat-option>USD</mat-option>
+            <mat-option>LTC</mat-option>
+            <mat-option>ZEC</mat-option>
+            <mat-option>ETH</mat-option>
+            <mat-option>ECC</mat-option>
+            <mat-option>DASH</mat-option>
+            <mat-option>CS</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <p>
+        LTC<br><span style="color:#0082b4">13%</span>
+      </p>
+      <p>
+        TUSD<br><span style="color:#aa00a0">-8.65%</span>
+      </p>
+      <p>
+        DGB<br><span style="color:#0082b4">9.7%</span>
+      </p>
+      <p>
+        BSV<br><span style="color:#aa00a0">-4.2%</span>
+      </p>
+      <p>
+        ADA<br><span style="color:#0082b4">3.0%</span>
+      </p>
+      <p>
+        WAVES<br><span style="color:#aa00a0">-5.0%</span>
+      </p>
+      <p>
+        PMA<br><span style="color:#aa00a0">-7.4%</span>
+      </p>
+      <p>
+        FCT<br><span style="color:#aa00a0">-9.0%</span>
+      </p>
+      <p>
+        DASH<br><span style="color:#0082b4">3.2%</span>
+      </p>
+    </div>
+  </div><br>
+</div>

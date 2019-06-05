@@ -1,0 +1,29 @@
+#walletGridContainer {
+    display: grid;
+    grid-template-columns: 25% auto;
+    grid-column-gap: 3px;
+}
+
+#walletSidebar {
+    background-color:rgb(32, 31, 31);
+    min-height: 550px;
+}
+
+#walletSidebar div {
+    padding: 10px;
+}
+
+#wlletContent {
+    background-color:rgb(32, 31, 31);
+    min-height: 550px;
+}
+
+#walletSidebar div>div>p {
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 0.5;
+}
+
+#walletSidebar div>div>p:hover {
+    color: #fbbd13;
+}

@@ -1,0 +1,198 @@
+<div id="grid-container">
+  <div id="header">
+    <div id="hImgSec"><img src="assets/myImages/Logo.png" alt="Bankdex Logo" width="6%"></div>
+    <div id="hDateSec"><span>2018-12-20 01:11:24</span></div>
+    <div id="hPriceSec">
+      <div>
+        <p>Last Price</p>
+        <p>30000.45 $5215.23</p>
+      </div>
+      <div>
+        <p>24h Change</p>
+        <p>246.05 +6.61%</p>
+      </div>
+      <div>
+        <p>24h High</p>
+        <p>3,982.12</p>
+      </div>
+      <div>
+        <p>24h Low</p>
+        <p>3,630.23</p>
+      </div>
+      <div>
+        <p>24h Volume</p>
+        <p>347,206,793.22 USDT</p>
+      </div>
+    </div>
+    <div id="hConSec">
+      <p *ngIf="false">
+        <mat-icon color="accent">wifi</mat-icon>&nbsp;Connected
+      </p>
+      <p>
+          <span  (click)="openDialog()"><mat-icon color="primary">wifi</mat-icon>&nbsp;Connecte Wallet<mat-icon>arrow_forward_ios</mat-icon></span>
+      </p>
+    </div>
+    <div id="dipWidSec">
+      <div>
+        <p><img src="assets/myImages/deposit.png" alt="Bankdex Logo" style="height: 30px;"></p>
+        <p style="font-size:13px">Deposit</p>
+      </div>
+      <div>
+        <p><img src="assets/myImages/withdrawl.png" alt="Bankdex Logo" style="height: 30px;"></p>
+        <p style="font-size:13px">Withdraw</p>
+      </div>
+    </div>
+  </div>
+  <div id="middle">
+    <div id="insidemiddle">
+      <div id="FirstRow">
+        <div colspan="2" class="m-leftSidebar">
+
+          <app-graph></app-graph>
+
+        </div>
+        <div class="m-middleSidebar">
+          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+            <!--- Note that these columns can be defined in any order.
+                      The actual rendered columns are set as a property on the row definition" -->
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="position">
+              <th mat-header-cell *matHeaderCellDef> Price </th>
+              <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef> Amount </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="weight">
+              <th mat-header-cell *matHeaderCellDef> Time </th>
+              <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </div>
+        <div class="m-rightSidebar" style="display:none">
+
+        </div>
+      </div>
+
+      <div id="SecondRow">
+        <div class="m-leftSidebar">
+          <div>
+            <button mat-button>Funds</button><button mat-flat-button>Coin</button>
+            <button mat-flat-button>Total balance</button><button mat-flat-button>Available
+              balance</button><button mat-flat-button>In order</button><button mat-flat-button>BTC Value</button>
+          </div>
+          <div>
+            <button mat-button>Open Orders</button><button mat-flat-button>Date</button><button mat-flat-button>Pair</button>
+            <!-- <button mat-flat-button>Type</button> -->
+            <button mat-flat-button>Side</button>
+            <button mat-flat-button>Amount</button>
+            <button mat-flat-button>Price</button>
+            <button mat-flat-button>Filled</button><button mat-flat-button>Total</button><button mat-flat-button>Trigger</button>
+            <button mat-flat-button>Cancell All</button>
+          </div>
+          <div>
+            <button mat-button>Order History</button><button mat-flat-button>1 Day</button><button mat-flat-button>1
+              Week</button><button mat-flat-button>1
+              Month</button><button mat-flat-button>3 Month</button>
+            <!-- <button mat-flat-button>From</button> -->
+            <button mat-flat-button>Date</button>
+            <!-- <button mat-flat-button>Pair</button> -->
+            <!-- <button mat-flat-button>Type</button><button mat-flat-button>Side</button> -->
+            <button mat-flat-button>Price</button><button mat-flat-button>Amount</button><button mat-flat-button>Total</button>
+          </div>
+          <div>
+            <button mat-button>Trade History</button><button mat-flat-button>1 Day</button>
+            <button mat-flat-button>1 Week</button><button mat-flat-button>1 Month</button>
+            <button mat-flat-button>3 Month</button>
+            <!-- <button mat-flat-button>From</button> -->
+            <button mat-flat-button>Time</button>
+            <!-- <button mat-flat-button>Pair</button><button mat-flat-button>Type</button> -->
+            <button mat-flat-button>Price</button><button mat-flat-button>Filled</button><button mat-flat-button>Fee</button><button
+              mat-flat-button>Total</button>
+          </div>
+        </div>
+        <div class="m-middleSidebar">
+          <span>SAM</span><span style="float:right;color:#fbbd13">USDT</span>
+          <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Price" value="">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Amount" value="">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Total" value="">
+            </mat-form-field>
+
+            <button mat-flat-button>Buy</button>
+          </form>
+        </div>
+        <div class="m-rightSidebar" style="margin-right: -6px;">
+          <span>SAM</span><span style="float:right;color:#fbbd13">USDT</span>
+          <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Price" value="">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Amount" value="">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Total" value="">
+            </mat-form-field>
+
+            <button mat-button>Sell</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="m-rightSidebar m-rightTokenSidebar" style="color:inherit;">
+      <mat-form-field style="width:50px; ">
+        <mat-select placeholder="Tokens" style="color:inherit;">
+          <mat-option *ngFor="" [value]="">
+            SAM Token
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <p>
+        LTC<br>13%
+      </p>
+      <p>
+        TUSD<br>-8.65%
+      </p>
+      <p>
+        DGB<br>9.7%
+      </p>
+      <p>
+        BSV<br>-4.2%
+      </p>
+      <p>
+        ADA<br>3.0%
+      </p>
+      <p>
+        WAVES<br>-5.0%
+      </p>
+      <p>
+        PMA<br>-7.4%
+      </p>
+      <p>
+        FCT<br>-9.0%
+      </p>
+      <p>
+        DASH<br>3.2%
+      </p>
+    </div>
+  </div>
+</div>

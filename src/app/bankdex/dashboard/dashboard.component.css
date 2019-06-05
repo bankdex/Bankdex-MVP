@@ -1,0 +1,350 @@
+#grid-container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  /* min-height: 660px; */
+  grid-template-rows: 10% 85%;
+  /* grid-gap: 3px 3px; */
+  padding: 21px;
+}
+
+#header {
+  display: grid;
+  grid-column-gap: 5px;
+  grid-template-columns: 21% 1% auto 13% 15%;
+}
+
+#header span {
+  font-size: 11px;
+}
+
+#hImgSec img {
+  width: 65px;
+  margin-left: -110px;
+}
+#hImgSec span{
+  padding-top: 10px;
+}
+#hDateSec {
+  padding-top: 25px;
+}
+
+#hDateSec span {
+  font-size: 13px;
+}
+
+#hPriceSec {
+  padding-top: 15px;
+}
+
+#hConSec {
+  padding-top: 22px;
+}
+
+#hConSec span {
+  cursor: pointer;
+}
+
+#hConSec span:hover {
+  color: #fbbd13;
+}
+
+#dipWidSec {
+  padding-top: 11px;
+  text-align: right;
+  padding-right: 15px;
+}
+
+#header div {
+  display: inline;
+  padding-left: 20px;
+  text-align: center;
+}
+
+#header div p {
+  display: table-row;
+  font-size: 12px;
+}
+
+#middle {
+  display: grid;
+  grid-column-gap: 3px;
+  grid-template-columns: 94% auto;
+}
+
+#insidemiddle {
+  display: grid;
+  grid-column-gap: 3px;
+  grid-row-gap: 3px;
+  grid-template-rows: 460px auto;
+}
+
+#FirstRow {
+  display: grid;
+  grid-column-gap: 3px;
+  grid-template-columns: 79.2% 20.4%;
+}
+
+#Firstmiddlerow {
+  /* display: grid;
+  grid-row-gap: 3px;
+  grid-column-gap: 3px;
+  /* border: 1px solid black; */
+  /* grid-template-rows: 180px auto;  */
+}
+
+#Firstmiddlerow #first {
+  /* background-color: rgb(32, 31, 31); */
+  border-bottom: 1px solid #444446;
+}
+
+#Firstmiddlerow #second {
+  padding: 10px 0px 0px 25px;
+}
+
+#first .divTop {
+  padding: 0px 0px 0px 10px;
+}
+
+#first .divTop > img {
+  padding-left: 5px;
+  cursor: pointer;
+}
+
+#first .divTop > img:hover {
+  background: #fbbd13;
+}
+
+#first .divMiddle {
+  text-align: center;
+  /* border: 1px solid; */
+  /* padding: 5px; */
+  /* margin: 26px; */
+  /* background: black; */
+  margin-top: 30%;
+}
+
+#first .divMiddle:hover {
+  color: transparent;
+}
+
+#second span{
+  font-size: 14px;
+}
+
+#SecondRow {
+  display: grid;
+  grid-column-gap: 4px;
+  grid-template-columns: 57% 42.5%;
+}
+
+.m-leftSidebar {
+  /* border: 1px solid black; */
+}
+
+.m-leftSidebar div button {
+  font-size: 12px;
+}
+
+.m-leftSidebar div button:nth-child(1) {
+  background: #fbbd13;
+  color: black;
+}
+
+.m-rightTokenSidebar {
+  /* margin-left: 6px; */
+  text-align: center;
+}
+
+.m-middleSidebar {
+  background: #141419;
+  /* border: 1px solid black; */
+  padding: 10px;
+}
+
+.m-rightSidebar {
+  background: #141419;
+  /* border: 1px solid black; */
+}
+
+.m-rightSidebar p {
+  font-size: 11px;
+}
+.m-rightSidebar span {
+  font-size: 9px;
+}
+
+/* angular material css */
+
+.divTop > .mat-form-field-infix {
+  width: 85px !important;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-cell,
+.mat-footer-cell {
+  font-size: 12px;
+  color: white;
+  background: rgb(32, 31, 31);
+}
+
+th.mat-header-cell {
+  padding: 0;
+  /* border-bottom-width: 1px; */
+  /* border-bottom-style: solid; */
+  background: rgb(32, 31, 31);
+  color: white;
+}
+
+/* fild input css */
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+/* button css */
+
+.m-leftSidebar div button.mat-button {
+  line-height: 20px;
+  min-width: 100px;
+}
+
+.m-leftSidebar div button.mat-flat-button {
+  line-height: 20px;
+  color: white;
+  background: #333131;
+  /* min-width: 50px; */
+  border-left: 1px solid black;
+}
+
+.mat-button {
+  line-height: 30px;
+  color: black;
+}
+
+.mat-flat-button {
+  line-height: 30px;
+}
+
+.mat-icon.mat-primary {
+  color: #f70606;
+}
+
+.tab-font-size-change span {
+  font-size: 11px;
+}
+
+/* customize css */
+
+.buyBtn {
+  width: 150px;
+  height: 23px;
+  font-size: 12px;
+  color: white;
+  background-color: #d630d3;
+  margin-right: 10px;
+  border: none;
+  float: right;
+}
+
+.m-middleSidebar label {
+  font-size: 11px;
+  margin-left: 8%;
+}
+
+.m-middleSidebar input {
+  margin-right: 10px;
+  float: right;
+  background-color: black;
+  color: white;
+  border: none;
+  width: 150px;
+  height: 23px;
+  font-size: 11px;
+  padding-left: 3px;
+  text-align: right;
+  padding-right: 3px;
+}
+
+.m-rightSidebar label {
+  font-size: 11px;
+  padding-left: 20px;
+}
+
+.m-rightSidebar input {
+  margin-right: 10px;
+  float: right;
+  background-color: black;
+  color: white;
+  border: none;
+  width: 150px;
+  height: 23px;
+  font-size: 11px;
+  padding-left: 3px;
+}
+
+.buySellHeading {
+  width: 150px;
+  height: 23px;
+  margin-right: 10px;
+  float: right;
+  background-color: black;
+}
+.buySellHeading span{
+  font-size: 16px
+}
+.percentagePart {
+  height: 23px;
+  margin-right: 10px;
+  float: right;
+  width: 150px;
+}
+.percentagePart span{
+  font-size: 10px;
+  padding: 7px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.m-middleSidebar .mat-tab-label {
+  min-width: 32% !important;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #333131;
+  font-size: 14px;
+}
+.nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 15px;
+  margin-bottom: 0px;
+  list-style: none;
+  font-size: 14px;
+  padding-top: 15px;
+  font-family: MicrosoftNew TaiLue !important;
+}
+
+.m-middleSidebar .mat-tab-label .mat-tab-label-content {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  font-size: 11px !important;
+}

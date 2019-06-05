@@ -1,0 +1,58 @@
+<div>
+  <p style="padding:20px 0px 0px 20px">Connect Ethereum Wallet</p>
+  <div id="contentBox">
+    <mat-tab-group mat-align-tabs="center">
+      <mat-tab label="Ledger" ><br>
+      <div style="border:2px solid black;padding: 5px;">
+          <p>Trade tokens on the Ethereum blockchain by connecting your Ledger Nano & hardware wallet.</p>
+        <div id="ledgerContainer">
+          <div> <img src="assets/myImages/connect-wallet.png" alt="" style="width:60%"></div>
+          <div>
+            <p style="border:1px solid white;width: 80%;padding: 2px;"><img src="assets/myImages/connect-icon.png" alt=""
+                style="width:9%">&nbsp;Connect and unlock your Ledger device
+            </p>
+            <p style="border:1px solid white;width: 80%;padding: 2px;"><img src="assets/myImages/distributed-ladger.png"
+                alt="" style="width:9%">&nbsp;Open the Ethereum App on your Ledger</p>
+          </div>
+        </div>
+        <div style="text-align:center"> <button mat-button>Connect Wallet</button></div>
+        <br>
+        <p>This is the recommended trading method. All transaction signing is done within your hardware wallet, and
+          your private keys never leaves the device.</p>
+      </div>
+      </mat-tab>
+      <mat-tab label="Metamask"><br>
+        <div style="border:2px solid black;padding: 5px;">
+        <p>Trade tokens on the Ethereum blockchain by connecting your Ledger Nano & hardware wallet.</p>
+        <div style="text-align:center">
+          <p style="font-size:13px">MetaMask extension detected!</p>
+          <p style="line-height: 0;">Press the button below to proceed..</p>
+        </div><br>
+        <div style="text-align:center"> <button mat-button>Connect Wallet</button></div>
+        <br>
+        <p>This is the recommended trading method. All transaction signing is done within your hardware wallet, and
+          your private keys never leaves the device.</p>
+          </div>
+      </mat-tab>
+      <mat-tab label="Private Key"><br>
+        <div style="border:2px solid black;padding: 5px;">
+        <p>Trade tokens on the Ethereum blockchain by connecting your Ledger Nano & hardware wallet.</p>
+        <div style="text-align:center">
+          <p style="font-size:13px">Enter private key</p>
+        
+            <form class="example-form">
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="********" value="">
+              </mat-form-field>
+            </form>
+       
+        </div>
+        <div style="text-align:center"> <button mat-button>Connect Wallet</button></div>
+        <br>
+        <p>This is the recommended trading method. All transaction signing is done within your hardware wallet, and
+          your private keys never leaves the device.</p>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>
